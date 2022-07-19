@@ -14,7 +14,7 @@
     <title>Veterinary Clinic</title>
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
     <!-- Inicio NAV -->
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <a class="navbar-brand" href="#">Veterinaria</a>
@@ -45,131 +45,97 @@
             </form>
         </div>
     </nav>
+<!-- fin NAV -->
+
     <div class="actions-menu">
         <h1>Mascotas</h1>
         <div class="actions-menu-content">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                 Nueva
             </button>
-            <div class="alert alert-danger alert-dismissible" role="alert">
+            <!-- <div class="alert alert-danger alert-dismissible" role="alert">
                 <strong>Oops!</strong> Algo hicimos mal, por favor vuelve a intentarlo!.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-                </button>
+                </button> -->
             </div>
         </div>
-    </div>
-    <table class="table table-stripped table-hover">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Dueño</th>
-                <th scope="col"></th>
-            </tr>
-            <tr>
-            <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="basic-example">
-                        <button type="button" class="btn btn-info">Editar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-            <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="basic-example">
-                        <button type="button" class="btn btn-info">Editar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="basic-example">
-                        <button type="button" class="btn btn-info">Editar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
-                    </div>
-                </td>
-            </tr>
+    
+        <table class="table table-stripped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Dueño</th>
+                    <th scope="col"></th>
+                </tr>
             </thead>
-        </thead>
-        <tbody id="lista-mascotas">
+            <tbody id="lista-mascotas">
             
-        </tbody>
-    </table>
-</div>
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Nueva Mascota</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Nueva Mascota</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
         <div class="modal-body">
             <form id="form">
                 <input type="hidden" id="indice" >
                 <div class="form-row">
                     <div class="col">
                         <select id="tipo" class="form-control">
-                          <option>Tipo animal</option>
-                          <option>Perro</option>
-                          <option>Gato</option>
-                          <option>Pájaro</option>
-                          <option>Otro</option>
+                            <option>Tipo animal</option>
+                            <option>Perro</option>
+                            <option>Gato</option>
+                            <option>Pájaro</option>
+                            <option>Otro</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
-                  <div class="col">
-                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre">
-                  </div>
-                  <div class="col">
-                    <select class="form-control" id="dueno">
-                      <option>Dueño</option>
-                      <option>Esteban</option>
-                      <option>Julián</option>
-                      <option>Jhon</option>
-                      <option>Felix</option>
-                      <option>Camilo</option>
-                    </select>
+                    <div class="col">
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre">
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="dueno">
+                            <option>Dueño</option>
+                            <option>Esteban</option>
+                            <option>Julián</option>
+                            <option>Jhon</option>
+                            <option>Felix</option>
+                            <option>Camilo</option>
+                        </select>
+                    </div>
                 </div>
-                </div>
-              </form>
+            </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn-guardar">Crear</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn-guardar">Crear</button>
         </div>
-      </div>
+        </div>
     </div>
 </div>
-<!-- JavaScript -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
-<script src="./js/mascotas.js"></script>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
+    <script src="./js/pets.js"></script>
+
 </body>
 </html>
