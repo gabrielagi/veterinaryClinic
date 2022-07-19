@@ -10,7 +10,7 @@ let mascotas = [
     {
         tipo: "Gato",
         nombre: "Michi",
-        dueno: "Alejo"
+        dueno: "Esteban"
     }
 ];
 
@@ -46,17 +46,38 @@ function enviarDatos(evento) {
         nombre: nombre.value,
         dueno: dueno.value,
       };
-      mascotas.push(datos);
+      const accion = btnGuardar.innerHTML;
+      if (accion === "Editar") {
+        method = "PUT";
+        mascotas[indice.value] = datos;
+      }
       listarMascotas();
+      resetModal();
     }
 
-    function editar(indice) {
-        return function handler() { //Guarda en el indice el neuvo valor de quien hace click
-            console.log(indice)
-        }
+function editar(index) {
+    return function handlerClick() { //Guarda en el indice el neuvo valor de quien hace click
+        btnGuardar.innerHTML = "Editar";
+        $("#exampleModalCenter").modal("toggle");
+        const mascota = mascotas[index];
+        nombre.value = mascota.nombre;
+        dueno.value = mascota.dueno;
+        tipo.value = mascota.tipo;
+        indice.value = index;
+        };
     }
-  
+
+    function resetModal() {
+        nombre.value = "";
+        dueno.value = "";
+        tipo.value = "";
+        indice.value = "";
+        btnGuardar.innerHTML = "Crear";
+      }
+
 listarMascotas();
+
+
 
 form.onsubmit = enviarDatos;
 btnGuardar.onclick = enviarDatos;
