@@ -23,7 +23,7 @@ function listarMascotas() {
     <td>${mascota.dueno}</td>
     <td>
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-info editar onclick="editar(${index})"><i class="fas fa-edit"></i></button>
+            <button type="button" class="btn btn-info editar"><i class="fas fa-edit"></i></button>
             <button type="button" class="btn btn-danger eliminar"><i class="far fa-trash-alt"></i></button>
         </div>
     </td>
@@ -51,7 +51,9 @@ function enviarDatos(evento) {
     }
 
     function editar(indice) {
-        console.log(indice);
+        return function handler() { //Guarda en el indice el neuvo valor de quien hace click
+            console.log(indice)
+        }
     }
   
 listarMascotas();
